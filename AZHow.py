@@ -1,5 +1,5 @@
 # importing Flask. Flask framework is used for developing web app using python.
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -10,6 +10,10 @@ def Home():
 @app.route('/about/')
 def About():
     return render_template("About.html")
+
+@app.route('/asu/')
+def ASU():
+    return render_template("ASU.html")
 
 @app.route('/food/')
 def Food():
@@ -50,6 +54,18 @@ def Tax():
 @app.route('/creditcards/')
 def Credit():
     return render_template("CreditCards.html")
+
+@app.route('/contact/')
+def Contact():
+    return render_template("Contact.html")
+
+@app.route("/thanks", methods=['POST'])
+def Thanks():
+    if request.method=='POST':
+        email = request.form["email_name"]
+        text = request.form["text_name"]
+        print(email, text)
+        return render_template("Thanks.html")
 
 
 if __name__ == "__main__":

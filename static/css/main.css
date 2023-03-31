@@ -57,12 +57,12 @@ h2 {
 }
 
 h3 {
-  font-size: 1.7em;
-  font-weight: 100;
+  font-size: 1.5em;
+  /* font-weight: 100; */
   margin-top: 30px;
-  text-align: center;
+  text-align: left;
   letter-spacing: -1px;
-  color: #999;
+  color: #990033;
 }
 
 .menu {
@@ -81,4 +81,32 @@ h3 {
 .menu li a {
   color: #990033;
   text-decoration: none;
+}
+
+.contact {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  /* background-color: #FFB310; */
+  color: #990033;
+  overflow: hidden;
+  text-align: center;
+}
+
+.contact input{
+  margin: 30px;
+}
+
+.email{
+  width: 350px;
+  height: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.text{
+  width: 500px;
+  height: 500px;
+  font-size: 15px;
+  /* text-align: center; */
 }
